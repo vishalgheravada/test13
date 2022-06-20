@@ -12,9 +12,12 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: vishalgheravada/ssh-github-action@5
+        uses: vishalgheravada/ssh-github-action@6
         with:
-          who-to-greet: "Mona the Octocat"
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"

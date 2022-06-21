@@ -10,6 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+      - name: slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_COLOR: #80DEEA
+
       - name: Hello world action step
         id: hello
         uses: vishalgheravada/ssh-github-action@6

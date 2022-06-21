@@ -14,7 +14,9 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_COLOR: #80DEEA
+          SLACK_COLOR: 80DEEA
+          SLACK_USERNAME: Wave-PWA
+          SLACK_TITLE: PR
 
       - name: Hello world action step
         id: hello

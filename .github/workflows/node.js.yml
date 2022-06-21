@@ -18,7 +18,6 @@ jobs:
           SLACK_USERNAME: Wave-PWA
           SLACK_TITLE: PR
           SLACK_ICON: https://waverfid.xyz/wp-content/uploads/2021/08/waveRFID-185.png
-          MSG_MINIMAL: Ref,Event,Commit
 
       - name: Hello world action step
         id: hello
